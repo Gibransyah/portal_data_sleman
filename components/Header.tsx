@@ -93,7 +93,7 @@ export default function Header() {
           >
             Eksplorasi Data
           </Link>
-          <a href="#" className="hover:text-blue-200 dark:hover:text-blue-300 transition-colors">
+          <a href="/tentang" className="hover:text-blue-200 dark:hover:text-blue-300 transition-colors">
             Tentang
           </a>
           <a href="#" className="hover:text-blue-200 dark:hover:text-blue-300 transition-colors">

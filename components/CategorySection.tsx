@@ -6,10 +6,10 @@ import {
   GraduationCap,
   LineChart,
   Building2,
-  Leaf,
+  Users,
 } from "lucide-react";
 
-// 🎨 Kategori dengan tone biru & netral senada
+// Kategori dengan tone biru & netral senada
 const categories = [
   {
     name: "Kesehatan",
@@ -40,11 +40,11 @@ const categories = [
       "bg-slate-50 text-slate-700 hover:bg-slate-100 dark:bg-slate-800/40 dark:text-slate-300 dark:hover:bg-slate-700/50",
   },
   {
-    name: "Lingkungan",
-    icon: Leaf,
-    href: "/eksplorasi?kategori=lingkungan",
+    name: "Sosial",
+    icon: Users,
+    href: "/eksplorasi?kategori=sosial",
     color:
-      "bg-teal-50 text-teal-700 hover:bg-teal-100 dark:bg-teal-900/20 dark:text-teal-300 dark:hover:bg-teal-900/40",
+      "bg-green-50 text-green-700 hover:bg-green-100 dark:bg-green-900/20 dark:text-green-300 dark:hover:bg-green-900/40",
   },
 ];
 

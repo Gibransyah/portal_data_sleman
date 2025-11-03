@@ -61,10 +61,6 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# npm
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
 
 # backups
 *.bak
