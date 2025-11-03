@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Search, Database, Download, ExternalLink } from "lucide-react";
 
@@ -51,7 +51,7 @@ const TOPIK_TO_TAG: Record<string, string> = {
 /* =========================
    Component
 ========================= */
-export default function EksplorasiDataPage() {
+function EksplorasiDataPageContent() {
   const params = useSearchParams();
   const [search, setSearch] = useState("");
   const [datasets, setDatasets] = useState<CkanPackage[]>([]);
@@ -270,5 +270,19 @@ export default function EksplorasiDataPage() {
         )}
       </div>
     </main>
+  );
+}
+
+export default function EksplorasiDataPage() {
+  return (
+    <Suspense fallback={
+      <main className="flex-1 pt-28 pb-16 bg-blue-50 dark:bg-blue-950">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-blue-600 dark:text-blue-300">Memuat...</p>
+        </div>
+      </main>
+    }>
+      <EksplorasiDataPageContent />
+    </Suspense>
   );
 }

@@ -107,7 +107,7 @@ export default function HighlightCards() {
                       {d.notes || "Tidak ada deskripsi."}
                     </p>
 
-                    {d.tags?.length > 0 && (
+                    {d.tags && d.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2 mb-4">
                         {d.tags.slice(0, 3).map((t) => (
                           <span

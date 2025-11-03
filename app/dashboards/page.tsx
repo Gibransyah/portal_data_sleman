@@ -3,9 +3,8 @@
 import React from 'react';
 import Header from '@/components/Header';
 import CarouselSection from '@/components/CarouselSection';
-import HighlightCards from '@/components/HighlightCards';
 import Footer from '@/components/Footer';
-import { latestDashboards, highlightCards } from '@/data/dashboards';
+import { latestDashboards } from '@/data/dashboards';
 
 export default function DashboardsPage() {
   return (
@@ -17,7 +16,6 @@ export default function DashboardsPage() {
           items={latestDashboards}
           autoPlay={false}
         />
-        <HighlightCards cards={highlightCards} />
       </main>
       <Footer />
     </div>

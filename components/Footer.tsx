@@ -22,6 +22,7 @@ export default function Footer({
   socialMedia,
 }: FooterProps) {
   const defaultContact: ContactInfo = {
+    address: "Sleman, Daerah Istimewa Yogyakarta",
     addressDetail:
       "Jalan Parasamya, Beran, Tridadi, Sleman, Daerah Istimewa Yogyakarta, Kode Pos 55511.",
     phone: "(0274) 868405",

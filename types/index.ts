@@ -6,6 +6,7 @@ export interface Dashboard {
   image?: string;
   link?: string;
   featured?: boolean;
+  slug?: string;
 }
 
 export interface HighlightCard {
