@@ -20,9 +20,9 @@ const data = [
 
 export default function TrendMiniChart() {
   return (
-    <section className="py-20 bg-blue-50 dark:bg-blue-950 transition-colors duration-500">
+    <section className="py-20 bg-blue-50 transition-colors duration-500">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-white mb-6 text-center">
+        <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">
           Tren Pertumbuhan Penduduk Sleman (2019–2023)
         </h2>
 
@@ -32,18 +32,15 @@ export default function TrendMiniChart() {
               <CartesianGrid
                 strokeDasharray="3 3"
                 stroke="#dbeafe"
-                className="dark:stroke-blue-900"
               />
               <XAxis
                 dataKey="year"
                 stroke="#1e3a8a"
                 tick={{ fill: "#1e3a8a" }}
-                className="dark:stroke-blue-400"
               />
               <YAxis
                 stroke="#1e3a8a"
                 tick={{ fill: "#1e3a8a" }}
-                className="dark:stroke-blue-400"
               />
               <Tooltip
                 contentStyle={{

@@ -55,8 +55,8 @@ export default function Footer({
       className="
         w-full 
         bg-blue-800 text-white 
-        dark:bg-blue-950 dark:text-blue-100
-        border-t border-blue-700 dark:border-blue-900
+       
+        border-t border-blue-700
         transition-colors duration-500
         mt-16
       "
@@ -67,7 +67,7 @@ export default function Footer({
           {/* LOGO */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-9 h-9 bg-white text-blue-700 dark:bg-blue-500 dark:text-white rounded-full flex items-center justify-center text-lg font-bold shadow-sm">
+              <div className="w-9 h-9 bg-white text-blue-700 rounded-full flex items-center justify-center text-lg font-bold shadow-sm">
                 ▲
               </div>
               <div className="flex flex-col leading-tight">
@@ -77,7 +77,7 @@ export default function Footer({
                 <span className="font-bold text-xl">SLEMAN</span>
               </div>
             </div>
-            <p className="text-sm text-blue-100/90 dark:text-blue-300">
+            <p className="text-sm text-blue-100/90">
               Pusat data dan informasi Kabupaten Sleman untuk kebijakan berbasis
               data dan transparansi publik.
             </p>
@@ -86,30 +86,30 @@ export default function Footer({
           {/* KONTAK */}
           <div>
             <div className="flex items-start gap-3 mb-4">
-              <MapPin className="w-5 h-5 mt-1 text-blue-200 dark:text-blue-400" />
+              <MapPin className="w-5 h-5 mt-1 text-blue-200" />
               <div>
                 <h4 className="font-bold">Alamat</h4>
-                <p className="text-sm text-blue-100/90 dark:text-blue-300 mt-1">
+                <p className="text-sm text-blue-100/90 mt-1">
                   {contact.addressDetail}
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-3 mb-4">
-              <Phone className="w-5 h-5 mt-1 text-blue-200 dark:text-blue-400" />
+              <Phone className="w-5 h-5 mt-1 text-blue-200" />
               <div>
                 <h4 className="font-bold">Telepon</h4>
-                <p className="text-sm text-blue-100/90 dark:text-blue-300 mt-1">
+                <p className="text-sm text-blue-100/90 mt-1">
                   {contact.phone}
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
-              <Mail className="w-5 h-5 mt-1 text-blue-200 dark:text-blue-400" />
+              <Mail className="w-5 h-5 mt-1 text-blue-200" />
               <div>
                 <h4 className="font-bold">Email</h4>
-                <p className="text-sm text-blue-100/90 dark:text-blue-300 mt-1">
+                <p className="text-sm text-blue-100/90 mt-1">
                   {contact.email}
                 </p>
               </div>
@@ -122,9 +122,9 @@ export default function Footer({
               <div key={index}>
                 <div className="flex items-center gap-2 mb-3">
                   {section.title === "Dashboard Sleman" ? (
-                    <LayoutDashboard className="w-5 h-5 text-blue-200 dark:text-blue-400" />
+                    <LayoutDashboard className="w-5 h-5 text-blue-200" />
                   ) : (
-                    <Database className="w-5 h-5 text-blue-200 dark:text-blue-400" />
+                    <Database className="w-5 h-5 text-blue-200" />
                   )}
                   <h4 className="font-bold">{section.title}</h4>
                 </div>
@@ -133,7 +133,7 @@ export default function Footer({
                     <li key={i}>
                       <a
                         href="#"
-                        className="text-sm text-blue-100/90 dark:text-blue-300 hover:text-blue-200 dark:hover:text-blue-400 transition-colors"
+                        className="text-sm text-blue-100/90 hover:text-blue-200 transition-colors"
                       >
                         {item}
                       </a>
@@ -147,16 +147,16 @@ export default function Footer({
           {/* SOSIAL MEDIA */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <Users className="w-5 h-5 text-blue-200 dark:text-blue-400" />
+              <Users className="w-5 h-5 text-blue-200" />
               <h4 className="font-bold">Ikuti Kami</h4>
             </div>
             <div className="flex gap-3">
               {/* LinkedIn */}
               <a
                 href={social.linkedin}
-                className="w-10 h-10 bg-white/20 dark:bg-blue-900 rounded-lg flex items-center justify-center hover:bg-white/30 dark:hover:bg-blue-800 transition-colors"
+                className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
               >
-                <span className="text-xs font-bold text-white dark:text-blue-300">
+                <span className="text-xs font-bold text-white">
                   in
                 </span>
               </a>
@@ -164,10 +164,10 @@ export default function Footer({
               {/* Instagram */}
               <a
                 href={social.instagram}
-                className="w-10 h-10 bg-white/20 dark:bg-blue-900 rounded-lg flex items-center justify-center hover:bg-white/30 dark:hover:bg-blue-800 transition-colors"
+                className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
               >
                 <svg
-                  className="w-6 h-6 text-white dark:text-blue-300"
+                  className="w-6 h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -178,10 +178,10 @@ export default function Footer({
               {/* YouTube */}
               <a
                 href={social.youtube}
-                className="w-10 h-10 bg-white/20 dark:bg-blue-900 rounded-lg flex items-center justify-center hover:bg-white/30 dark:hover:bg-blue-800 transition-colors"
+                className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
               >
                 <svg
-                  className="w-6 h-6 text-white dark:text-blue-300"
+                  className="w-6 h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -194,8 +194,8 @@ export default function Footer({
       </div>
 
       {/* COPYRIGHT */}
-      <div className="border-t border-blue-700 dark:border-blue-900 py-4">
-        <p className="text-center text-xs md:text-sm text-blue-100/90 dark:text-blue-400">
+      <div className="border-t border-blue-700 py-4">
+        <p className="text-center text-xs md:text-sm text-blue-100/90">
           © 2025 Pemerintah Kabupaten Sleman — Semua Hak Dilindungi.
         </p>
       </div>

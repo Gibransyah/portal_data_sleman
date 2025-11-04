@@ -16,46 +16,46 @@ const categories = [
     icon: Activity,
     href: "/eksplorasi?kategori=kesehatan",
     color:
-      "bg-blue-50 text-blue-700 hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-300 dark:hover:bg-blue-900/40",
+      "bg-blue-50 text-blue-700 hover:bg-blue-100",
   },
   {
     name: "Pendidikan",
     icon: GraduationCap,
     href: "/eksplorasi?kategori=pendidikan",
     color:
-      "bg-indigo-50 text-indigo-700 hover:bg-indigo-100 dark:bg-indigo-900/20 dark:text-indigo-300 dark:hover:bg-indigo-900/40",
+      "bg-indigo-50 text-indigo-700 hover:bg-indigo-100",
   },
   {
     name: "Ekonomi",
     icon: LineChart,
     href: "/eksplorasi?kategori=ekonomi",
     color:
-      "bg-cyan-50 text-cyan-700 hover:bg-cyan-100 dark:bg-cyan-900/20 dark:text-cyan-300 dark:hover:bg-cyan-900/40",
+      "bg-cyan-50 text-cyan-700 hover:bg-cyan-100",
   },
   {
     name: "Infrastruktur",
     icon: Building2,
     href: "/eksplorasi?kategori=infrastruktur",
     color:
-      "bg-slate-50 text-slate-700 hover:bg-slate-100 dark:bg-slate-800/40 dark:text-slate-300 dark:hover:bg-slate-700/50",
+      "bg-slate-50 text-slate-700 hover:bg-slate-100",
   },
   {
     name: "Sosial",
     icon: Users,
     href: "/eksplorasi?kategori=sosial",
     color:
-      "bg-green-50 text-green-700 hover:bg-green-100 dark:bg-green-900/20 dark:text-green-300 dark:hover:bg-green-900/40",
+      "bg-green-50 text-green-700 hover:bg-green-100",
   },
 ];
 
 export default function CategorySection() {
   return (
-    <section className="py-20 px-6 bg-white dark:bg-blue-950 transition-colors duration-500">
+    <section className="py-20 px-6 bg-white transition-colors duration-500">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">
           Eksplorasi Data Berdasarkan Topik
         </h2>
-        <p className="text-gray-600 dark:text-blue-200 mb-10">
+        <p className="text-gray-600 mb-10">
           Pilih kategori di bawah untuk menjelajahi dataset tematik Kabupaten Sleman.
         </p>
 
@@ -65,7 +65,7 @@ export default function CategorySection() {
               key={cat.name}
               href={cat.href}
               className={`${cat.color} rounded-xl py-10 flex flex-col items-center justify-center 
-                         shadow-sm border border-gray-100 dark:border-blue-900/50 hover:shadow-md transition-all`}
+                         shadow-sm border border-gray-100 hover:shadow-md transition-all`}
             >
               <cat.icon className="w-10 h-10 mb-3" />
               <span className="font-semibold text-base">{cat.name}</span>

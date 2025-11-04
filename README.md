@@ -35,7 +35,7 @@ Dashboard interaktif untuk visualisasi, eksplorasi, dan pencarian data resmi Pem
 
 1. **Clone repository:**
     ```bash
-    git clone https://github.com/username/dashboard-sleman.git
+    git clone https://github.com/Gibransyah/portal_data_sleman.git
     cd dashboard-sleman
     ```
 2. **Install dependencies:**

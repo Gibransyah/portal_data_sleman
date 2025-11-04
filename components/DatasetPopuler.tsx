@@ -59,17 +59,17 @@ export default function DatasetPopuler() {
     <section
       className="
         py-20 px-6 
-        bg-blue-50 dark:bg-blue-950 
+        bg-blue-50 
         transition-colors duration-500
       "
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-blue-900 dark:text-white mb-10 text-center">
+        <h2 className="text-3xl font-bold text-blue-900 mb-10 text-center">
           Dataset Populer
         </h2>
 
         {loading ? (
-          <p className="text-gray-500 dark:text-blue-200 text-center">
+          <p className="text-gray-500 text-center">
             Memuat dataset populer...
           </p>
         ) : (
@@ -93,10 +93,10 @@ export default function DatasetPopuler() {
                 <div
                   key={d.id}
                   className="
-                    bg-white dark:bg-blue-900/20 
-                    border border-blue-100 dark:border-blue-800 
+                    bg-white 
+                    border border-blue-100 
                     rounded-xl p-6 
-                    hover:shadow-lg dark:hover:shadow-blue-800/30 
+                    hover:shadow-lg 
                     transition-all 
                     flex flex-col justify-between
                   "
@@ -104,20 +104,20 @@ export default function DatasetPopuler() {
                   {/* Header */}
                   <div>
                     <div className="flex items-center gap-2 mb-2">
-                      <Database className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                      <h3 className="font-semibold text-lg text-blue-900 dark:text-white leading-tight">
+                      <Database className="w-5 h-5 text-blue-600" />
+                      <h3 className="font-semibold text-lg text-blue-900 leading-tight">
                         {d.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-gray-700 dark:text-blue-200 mb-3">
+                    <p className="text-sm text-gray-700 mb-3">
                       {desc}
                     </p>
 
                     <span
                       className="
                         inline-block 
-                        bg-blue-100 dark:bg-blue-800/40 
-                        text-blue-700 dark:text-blue-300 
+                        bg-blue-100 
+                        text-blue-700 
                         text-xs px-3 py-1 rounded-full mb-4
                       "
                     >
@@ -126,11 +126,11 @@ export default function DatasetPopuler() {
                   </div>
 
                   {/* Footer actions */}
-                  <div className="flex items-center justify-between mt-auto pt-3 border-t border-blue-100 dark:border-blue-800">
+                  <div className="flex items-center justify-between mt-auto pt-3 border-t border-blue-100">
                     <Link
                       href={internalUrl}
                       className="
-                        text-blue-700 dark:text-blue-300 
+                        text-blue-700 
                         text-sm font-medium 
                         hover:underline flex items-center gap-1
                       "
@@ -139,12 +139,12 @@ export default function DatasetPopuler() {
                       <ArrowRight className="w-4 h-4" />
                     </Link>
 
-                    <div className="flex items-center gap-4 text-sm text-blue-600 dark:text-blue-300">
+                    <div className="flex items-center gap-4 text-sm text-blue-600">
                       <a
                         href={portalUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-blue-800 dark:hover:text-blue-400 flex items-center gap-1"
+                        className="hover:text-blue-800 flex items-center gap-1"
                       >
                         <ExternalLink className="w-4 h-4" /> Portal
                       </a>
@@ -153,7 +153,7 @@ export default function DatasetPopuler() {
                           href={csv.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:text-blue-800 dark:hover:text-blue-400 flex items-center gap-1"
+                          className="hover:text-blue-800 flex items-center gap-1"
                         >
                           <Download className="w-4 h-4" /> Unduh
                         </a>

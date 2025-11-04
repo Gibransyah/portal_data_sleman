@@ -11,12 +11,12 @@ export default function HeroSection() {
   return (
     <section
       className="relative overflow-hidden 
-                 bg-blue-700 dark:bg-blue-950 
+                 bg-blue-700 
                  text-white py-28 md:py-32 px-6 
                  transition-colors duration-700"
     >
       {/* Pola latar halus */}
-      <div className="absolute inset-0 bg-[url('/pattern-light.svg')] dark:bg-[url('/pattern-dark.svg')] opacity-[0.06]" />
+      <div className="absolute inset-0 bg-[url('/pattern-light.svg')] opacity-[0.06]" />
 
       <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
         {/* ===== LEFT CONTENT ===== */}
@@ -38,17 +38,17 @@ export default function HeroSection() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyPress={(e) => e.key === "Enter" && handleSearch()}
-                className="w-full px-6 py-4 rounded-lg text-gray-800 dark:text-gray-100
-                           bg-white/95 dark:bg-gray-900/90
-                           placeholder-gray-500 dark:placeholder-gray-500
+                className="w-full px-6 py-4 rounded-lg text-gray-800
+                           bg-white/95
+                           placeholder-gray-500
                            focus:outline-none focus:ring-2 focus:ring-blue-400
                            shadow-sm transition duration-300"
               />
             </div>
             <button
               onClick={handleSearch}
-              className="bg-blue-800 dark:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold 
-                         hover:bg-blue-900 dark:hover:bg-blue-600
+              className="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold 
+                         hover:bg-blue-900
                          shadow-md transition-all duration-300"
             >
               Cari
@@ -60,11 +60,11 @@ export default function HeroSection() {
         <div className="hidden md:flex justify-center relative">
           <div
             className="relative w-[90%] h-[320px] rounded-3xl 
-                       bg-white/10 dark:bg-white/5
+                       bg-white/10
                        border border-white/10 backdrop-blur-sm
                        flex items-center justify-center shadow-inner"
           >
-            <div className="text-[5rem] text-white/30 dark:text-white/20 select-none">
+            <div className="text-[5rem] text-white/30 select-none">
               📊
             </div>
           </div>

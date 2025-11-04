@@ -116,12 +116,12 @@ function EksplorasiDataPageContent() {
      RENDER
   ========================= */
   return (
-    <main className="flex-1 pt-28 pb-16 bg-blue-50 dark:bg-blue-950 text-blue-950 dark:text-blue-100 transition-colors duration-500">
+    <main className="flex-1 pt-28 pb-16 bg-blue-50 text-blue-950 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6">
-        <h1 className="text-4xl font-bold text-blue-900 dark:text-white mb-2">
+        <h1 className="text-4xl font-bold text-blue-900 mb-2">
           Eksplorasi Data Sleman
         </h1>
-        <p className="text-blue-700/80 dark:text-blue-300 mb-6">
+        <p className="text-blue-700/80 mb-6">
           Jelajahi kumpulan data resmi berdasarkan topik seperti kesehatan,
           pendidikan, kebudayaan, infrastruktur, dan lainnya.
         </p>
@@ -129,7 +129,7 @@ function EksplorasiDataPageContent() {
         {selectedTopic && (
           <div className="mb-4">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full 
-                             bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-sm">
+                             bg-blue-100 text-blue-800 text-sm">
               Topik: <strong className="capitalize">{selectedTopic}</strong>
             </span>
           </div>
@@ -144,16 +144,16 @@ function EksplorasiDataPageContent() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              className="w-full px-6 py-4 rounded-lg border border-blue-200 dark:border-blue-800 
-                         bg-white dark:bg-blue-900 text-blue-900 dark:text-blue-100
-                         placeholder:text-blue-400 dark:placeholder:text-blue-500
+              className="w-full px-6 py-4 rounded-lg border border-blue-200 
+                         bg-white text-blue-900
+                         placeholder:text-blue-400
                          focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
             />
-            <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-400 dark:text-blue-300" />
+            <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-400" />
           </div>
           <button
             onClick={handleSearch}
-            className="bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-500 
+            className="bg-blue-700 hover:bg-blue-800 
                        text-white px-8 py-4 rounded-lg font-semibold 
                        transition-all flex items-center justify-center gap-2"
           >
@@ -173,8 +173,8 @@ function EksplorasiDataPageContent() {
                 href={href}
                 className={`px-4 py-2 rounded-full border text-sm font-medium transition-colors ${
                   active
-                    ? "bg-blue-700 text-white border-blue-700 dark:bg-blue-600 dark:border-blue-600"
-                    : "bg-white text-blue-700 border-blue-200 hover:bg-blue-100 dark:bg-blue-900 dark:text-blue-200 dark:border-blue-800 dark:hover:bg-blue-800"
+                    ? "bg-blue-700 text-white border-blue-700"
+                    : "bg-white text-blue-700 border-blue-200 hover:bg-blue-100"
                 }`}
               >
                 {t.label}
@@ -185,7 +185,7 @@ function EksplorasiDataPageContent() {
 
         {/* Grid datasets */}
         {loading ? (
-          <p className="text-blue-500 dark:text-blue-300">Memuat data…</p>
+          <p className="text-blue-500">Memuat data…</p>
         ) : datasets.length ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {datasets.map((d) => {
@@ -198,19 +198,19 @@ function EksplorasiDataPageContent() {
               return (
                 <div
                   key={d.id}
-                  className="bg-white dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 
-                             rounded-xl p-6 hover:shadow-lg dark:hover:shadow-blue-800/30 
+                  className="bg-white border border-blue-200 
+                             rounded-xl p-6 hover:shadow-lg 
                              transition-all flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center gap-3 mb-3">
-                      <Database className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                      <h3 className="text-lg font-semibold text-blue-900 dark:text-white line-clamp-2">
+                      <Database className="w-5 h-5 text-blue-600" />
+                      <h3 className="text-lg font-semibold text-blue-900 line-clamp-2">
                         {d.title}
                       </h3>
                     </div>
 
-                    <p className="text-sm text-blue-700/80 dark:text-blue-200 line-clamp-3 mb-4">
+                    <p className="text-sm text-blue-700/80 line-clamp-3 mb-4">
                       {d.notes || "Tidak ada deskripsi."}
                     </p>
 
@@ -219,7 +219,7 @@ function EksplorasiDataPageContent() {
                         {d.tags.slice(0, 4).map((t) => (
                           <span
                             key={t.id || t.name}
-                            className="px-2 py-1 rounded bg-blue-100 dark:bg-blue-800/40 text-blue-700 dark:text-blue-200 text-xs"
+                            className="px-2 py-1 rounded bg-blue-100 text-blue-700 text-xs"
                           >
                             {t.display_name || t.name}
                           </span>
@@ -228,10 +228,10 @@ function EksplorasiDataPageContent() {
                     )}
                   </div>
 
-                  <div className="flex flex-wrap items-center gap-4 mt-auto pt-3 border-t border-blue-100 dark:border-blue-800">
+                  <div className="flex flex-wrap items-center gap-4 mt-auto pt-3 border-t border-blue-100">
                     <a
                       href={internalUrl}
-                      className="text-blue-700 dark:text-blue-300 font-semibold text-sm hover:underline"
+                      className="text-blue-700 font-semibold text-sm hover:underline"
                     >
                       Ringkasan →
                     </a>
@@ -240,7 +240,7 @@ function EksplorasiDataPageContent() {
                       href={portalUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-400"
+                      className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Portal
@@ -251,7 +251,7 @@ function EksplorasiDataPageContent() {
                         href={res.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-400"
+                        className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800"
                         title={`Unduh ${res.format || ""}`.trim()}
                       >
                         <Download className="w-4 h-4" />
@@ -264,7 +264,7 @@ function EksplorasiDataPageContent() {
             })}
           </div>
         ) : (
-          <p className="text-blue-600 dark:text-blue-300">
+          <p className="text-blue-600">
             Tidak ada dataset ditemukan.
           </p>
         )}
@@ -276,9 +276,9 @@ function EksplorasiDataPageContent() {
 export default function EksplorasiDataPage() {
   return (
     <Suspense fallback={
-      <main className="flex-1 pt-28 pb-16 bg-blue-50 dark:bg-blue-950">
+      <main className="flex-1 pt-28 pb-16 bg-blue-50">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-blue-600 dark:text-blue-300">Memuat...</p>
+          <p className="text-blue-600">Memuat...</p>
         </div>
       </main>
     }>
