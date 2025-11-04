@@ -1,12 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Search } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
 
-  const handleSearch = () => console.log(searchQuery);
+  const handleSearch = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    const trimmed = searchQuery.trim();
+    if (!trimmed) return;
+    router.push(`/eksplorasi?search=${encodeURIComponent(trimmed)}`);
+  };
 
   return (
     <section
@@ -30,14 +36,14 @@ export default function HeroSection() {
           </p>
 
           {/* Search bar */}
-          <div className="flex gap-3 max-w-xl mt-6">
+          <form onSubmit={handleSearch} className="flex gap-3 max-w-xl mt-6">
             <div className="flex-1 relative">
               <input
                 type="text"
                 placeholder="Cari data atau dashboard..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyPress={(e) => e.key === "Enter" && handleSearch()}
+                onKeyDown={(e) => e.key === "Enter" && handleSearch(e)}
                 className="w-full px-6 py-4 rounded-lg text-gray-800
                            bg-white/95
                            placeholder-gray-500
@@ -46,14 +52,14 @@ export default function HeroSection() {
               />
             </div>
             <button
-              onClick={handleSearch}
+              type="submit"
               className="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold 
                          hover:bg-blue-900
                          shadow-md transition-all duration-300"
             >
               Cari
             </button>
-          </div>
+          </form>
         </div>
 
         {/* ===== RIGHT VISUAL ===== */}
